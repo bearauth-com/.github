@@ -24,7 +24,7 @@ BearAuth is a RESTful API that you invoke from your own backend service.
 
 A RESTful API:
 
-- Users (PII obfuscation)
+- Identity
 - Access (roles, groups, and permissions)
 - Passwords (hashing, verification, recovery, strength enforcement, and breach detection)
 - Time-based one-time passwords (generation and verification)
@@ -46,6 +46,11 @@ A RESTful API:
 - Basic Auth
 - Bearer tokens (JWT)
 
+(Coming Soon) Templates for standalone deployment to the following cloud providers:
+
+- AWS
+- Azure
+
 Consultation is also available if you want a custom solution hand crafted for your needs.
 
 ## How is BearAuth different?
@@ -54,7 +59,9 @@ With BearAuth, you own your own authentication solution, all for about the same 
 
 ### Better Security
 
-BearAuth uses [zero-access encryption](#what-is-zero-access-encryption) to protect your secrets. This means that even if BearAuth is compromised, your secrets are still safe.
+BearAuth uses zero-access encryption to protect your secrets. This means that even if BearAuth is compromised, your secrets are still safe.
+
+Zero-access encryption works by encrypting your secrets with your API keys, which BearAuth never stores. Even BearAuth can't decrypt your secrets unless you make a request with an API key.
 
 Other solutions not only don't use zero-access encryption, but they technically can't do so. They have features like login pages that are end-user facing, so they have to be able to decrypt and use your secrets _independently._ This makes your secrets vulnerable to breaches and misuse.
 
@@ -63,6 +70,8 @@ BearAuth is focused on security, because it's all we do.
 ### More Control
 
 The user experience is yours. Your website, your components, your design. No redirecting to a 3rd party login page with pay-to-remove 3rd party branding. No page refreshes to re-authenticate. No fiddling with custom domains pointing to a 3rd party. You just need a single `/auth` (or equivalent) endpoint in your own API, and we will even provide the implementation.
+
+The API is simple and can be self hosted. If you ever feel like you want to move away from BearAuth, you can replace the API with your own implementation, and you won't have to change your user experience at all. The vendor lock-in is that low.
 
 ### Lower Cost
 
