@@ -28,7 +28,7 @@ A RESTful API:
 - Access (roles, groups, and permissions)
 - Passwords (hashing, verification, recovery, strength enforcement, and breach detection)
 - Time-based one-time passwords (generation and verification)
-- public key cryptography (key generation, signing, and verification)
+- Public key cryptography (key generation, signing, and verification)
 - Mock server (testing)
 
 (Coming Soon) API SDKs for the following environments:
@@ -79,4 +79,4 @@ BearAuth is minimal. The simple and low ongoing cost we pass on to you reflects 
 
 As you implement your own authentication solution, we can provide consultation engagements for a one-time fee, all the way up to building the whole solution for you on your own infrastructure. Once you have your solution with the features you need, you won't need to pay for more than the ongoing cost of using the API.
 
-We can also help you self-host the BearAuth API itself for a flat yearly support subscription fee. This can reduce your costs even further, while providing even more security and control.
+We can also help you self-host the BearAuth API itself for an annual subscription fee. This can reduce your costs even further, while providing even more security and control.
